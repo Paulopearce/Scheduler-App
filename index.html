@@ -212,6 +212,19 @@ document.getElementById('currentDay').textContent = currentDate
 // Keep track of the hour to compare current time to preset times
 let presentHour = moment().hour()
 
+let schedule = {
+  'plan8': '',
+  'plan9': '',
+  'plan10': '',
+  'plan11': '',
+  'plan12': '',
+  'plan13': '',
+  'plan14': '',
+  'plan15': '',
+  'plan16': '',
+  'plan17': ''
+}
+
 //Set up local storage variable that updates local storage with key 
 // "workday" and parses the value to an object or returns schedule object
 let workday = JSON.parse(localStorage.getItem('workday')) || schedule
