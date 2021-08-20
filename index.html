@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Day Scheduler</title>
+    <!-- bootstrap package -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- fonts -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- styling -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Bootstrap jumbo header element -->
+    <header class="jumbotron">
+      <!-- Title of app -->
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <!-- Description of app function -->
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <!-- paragraph that displays the current date -->
+      <p id="currentDay" class="lead"></p>
+
+    </header>
+    <!-- Bootstrap container -->
+    <div id="container" class="container">
+      <!-- Time slots go below this -->
+      <!-- bootstrap row -->
+      <div class="row">
+        <!-- one column(1/12 div size) that has margins up until screen size small("sm") -->
+        <!-- Time in column -->
+        <!--Div id set up to interact with element-->
+        <div class="col-sm-1" id="time8">8AM</div>
+        <!-- ten columns (5/6 of container div) that has margins up until screen size small("sm") -->
+        <div class="col-sm-10">
+          <textarea type="text" id="plan8"></textarea>
+          <!-- Text area -->
+          <!-- Set id of "plan8" to interact with it later -->
+        </div>
+        <!-- one column(1/12 div size) that has margins up until screen size small("sm") -->
+        <!-- Set buttons with "saveBtn" class to affect muliple buttons -->
+        <div class="col-sm-1 saveBtn material-icons">save</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1" id="time9">9AM</div>
+        <div class="col-sm-10">
+          <textarea type="text" id="plan9"></textarea>
+        </div>
+        <div class="col-sm-1 saveBtn material-icons">save</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1" id="time10">10AM</div>
+        <div class="col-sm-10">
+          <textarea type="text" id="plan10"></textarea>
+        </div>
+        <div class="col-sm-1 saveBtn material-icons">save</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1" id="time11">11AM</div>
+        <div class="col-sm-10">
+          <textarea type="text" id="plan11"></textarea>
+        </div>
+        <div class="col-sm-1 saveBtn material-icons">save</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1" id="time12">12PM</div>
+        <div class="col-sm-10">
+          <textarea type="text" id="plan12"></textarea>
+        </div>
+        <div class="col-sm-1 saveBtn material-icons">save</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1" id="time13">1PM</div>
+        <div class="col-sm-10">
+          <textarea type="text" id="plan13"></textarea>
+        </div>
+        <div class="col-sm-1 saveBtn material-icons">save</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1" id="time14">2PM</div>
+        <div class="col-sm-10">
+          <textarea type="text" id="plan14"></textarea>
+        </div>
+        <div class="col-sm-1 saveBtn material-icons">save</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1" id="time15">3PM</div>
+        <div class="col-sm-10">
+          <textarea type="text" id="plan15"></textarea>
+        </div>
+        <div class="col-sm-1 saveBtn material-icons">save</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1" id="time16">4PM</div>
+        <div class="col-sm-10">
+          <textarea type="text" id="plan16"></textarea>
+        </div>
+        <div class="col-sm-1 saveBtn material-icons">save</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1" id="time17">5PM</div>
+        <div class="col-sm-10">
+          <textarea type="text" id="plan17"></textarea>
+        </div>
+        <div class="col-sm-1 saveBtn material-icons">save</div>
+      </div>
+
+    </div>
+ 
+    <!-- Moment JS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="index.js"></script>
+    <!-- <script>
+      let currentDate = moment().format("dddd, MMMM Do");
+
+      document.getElementById("currentDay").textContent = currentDate;
+
+      let presentHour = moment().hour();
+
+      const stringInterger = (timeString) => {
+        switch (timeString) {
+          case "9AM":
+            return 9;
+          case "10AM":
+            return 10;
+          case "11AM":
+            return 11;
+          case "12PM":
+            return 12;
+          case "1PM":
+            return 13;
+          case "2PM":
+            return 14;
+          case "3PM":
+            return 15;
+          case "4PM":
+            return 16;
+          case "5PM":
+            return 17;
+        }
+      };
+
+      for (let i = 9; i <= 17; i++) {
+        let timeCounter = "time" + i;
+        let timeString = document.getElementById(timeCounter).textContent;
+        let timeInterger = stringInterger(timeString);
+      }
+    </script> -->
+  </body>
+</html>
